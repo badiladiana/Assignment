@@ -18,7 +18,7 @@ Technologies and tools used:
 ServiceManager.
   The MVC is the client, and its controllers should not be concerned where the requested data comes from. It can be from a DB, from an Api, etc. For that purpose I created
 the ServiceManager layer. This project deals with calling the data from API and converts the complex model coming from API to a more simple DTO class that is focusing only on 
-the makelaar's (which is what we need to feed our client). Here I decided to add a litle server side caching using System.Runtime.Caching. I made an assumption from a business
+the makelaar's (which is what we need to feed our client). Here I decided to add a little server side caching using System.Runtime.Caching. I made an assumption from a business
 perspective that the top 10 real estate agents don't change that often, so I added a 30 min cache on the retrieved data. That should mitigate the number of requests per minute issue.
 I implemented both a cached version of data retrieval and also non cached.
 
