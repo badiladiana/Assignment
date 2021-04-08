@@ -30,7 +30,7 @@ be enough. In case of running the app, secret has to be set, all you have to do 
 Assignment.
    The web project itself, is a simple MVC solution, which calls the ServiceManager to retrieve the top 10 makelaar's. There is a small Manager folder in there as well which
  helps with mapping and converting the DTO to the actual ViewModel,removing that responsibility from the controller. On the front end side, a very simple razor view which contains
-the table with top 10 agents and a checkbox that allows the user to select objects with our without garden. For the rest of parameters, like city(Amsterdam) I decided no have fixed values.
+the table with top 10 agents and a checkbox that allows the user to select objects with our without garden. For the rest of parameters, like city(Amsterdam) I decided to have fixed values.
  
    My purpose was to be able to show you how I see the separation of concerns in this particular case, try to have a good optimization of API call, have security in mind for sensitive things
 like APIkeys, have a business point of view in mind and build a simple but hopefully logical solution.
