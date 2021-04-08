@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Makelaar's</h3>
+
+
+<input type="hidden" value="" id="checkboxValueGarden" name="garden">
+<input type="checkbox" id="checkboxGarden" /> Has Garden
+
+<div id="agentsTable"></div>
+
+<script src="~/js/agents.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#checkboxGarden').change(function () {
+            if ($('#checkboxGarden').is(":checked")) {
+                $("#checkboxValueGarden").val(true);
+                getRealEstateAgents(true);
+            }
+            else {
+                $("#checkboxValueGarden").val(false);
+                getRealEstateAgents(false);
+            }
+        });
+        var hasGarden = $("#checkboxValueGarden").val();
+        getRealEstateAgents(hasGarden);
+    });
+
+</script>
